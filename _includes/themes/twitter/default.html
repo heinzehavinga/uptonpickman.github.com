@@ -17,7 +17,7 @@
     <!-- Le styles -->
     <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
-
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -33,33 +33,52 @@
   </head>
 
   <body style="background: url(img/header_image_2.png) no-repeat center center fixed;">
-    <div class="navbar">
-      <div class="navbar-inner">
-        <div class="container-narrow">
-          <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
-          <ul class="nav">
+       <div id="wrap">
+        <header>
+            <div id="branding">
+                <img src="img/logo_appsomintelijsten.png" alt="Apps om in te lijsten">
+            </div>
+    <nav class="navbar navbar-default" role="navigation" data-spy="affix" data-offset-top="227">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="nav navbar-nav">
             {% assign pages_list = site.pages %}
             {% assign group = 'navigation' %}
             {% include JB/pages_list %}
           </ul>
-        </div>
-      </div>
-    </div>
+         </ul>
+                </div>
+            </nav>
+        </header>
 
-    <div class="container-narrow">
+    
 
-      <div class="content">
+       <div id="content">
+            <div class="container">
+                <div class="row">
         {{ content }}
       </div>
-      <hr>
-      <footer>
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
-          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
-        </p>
-      </footer>
+          <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <strong>Contactinformatie</strong>
+                    <p>
+                       Bacon ipsum dolor sit amet pork loin venison consequat 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    </div>
+    
 
     {% include JB/analytics %}
   </body>
